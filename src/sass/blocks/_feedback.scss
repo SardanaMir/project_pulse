@@ -1,0 +1,38 @@
+.feedback {
+    min-height: 800px;
+    background-color: white;
+    
+    &__block{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 60px;
+    }
+    &__client-info {
+        margin-left: 61px;
+    }
+
+    &__client-name{
+        font-family: 'MuseoModerno';
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 18px;
+        color: #0D0D0D;
+    }
+
+    &__number-of-distance{
+        font-family: 'MuseoModerno';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 22px;
+        color: #646464;
+    }
+
+    &__descr{
+        margin-top: 10px;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+        color: #0D0D0D;
+    }
+}
