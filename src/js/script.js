@@ -67,6 +67,8 @@ $(document).ready(function(){
         });
     });
 
+
+
     // $('#consultation-form').validate();
     // $('#consultation form').validate({
     //     rules: {
@@ -126,6 +128,39 @@ $(document).ready(function(){
     validateForms('#order form');
     
     $('input[name=phone]').mask("+7 (999) 999-99-99");
+
+
+    //smooth scroll and page up
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 1600) {
+            $('.pageup').fadeIn();
+        } else {
+            $('.pageup').fadeOut();
+        }
+    });
+
+      // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
 
 });
  
